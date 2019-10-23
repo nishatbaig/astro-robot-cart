@@ -172,68 +172,50 @@ const calculateProductsPath = () => {
  */
 const checkNeighborNodes = (x, y, level) => {
     if (x == 0  && y == 0) {
-        // 1
         addVisitedNode((x+1), y, level, x, y);
         addVisitedNode((x), (y+1), level, x, y);
-        //
         addVisitedNode((x+1), (y+1), level, x, y);
     } else if(x == gridWidth - 1 && y == 0) {
-        // 2
         addVisitedNode((x-1), y, level, x, y);
         addVisitedNode((x), (y+1), level, x, y);
-        //
         addVisitedNode((x-1), (y+1), level, x, y);
     } else if(x == gridWidth - 1 && y < gridHeight - 1) {
-        // 3
         addVisitedNode((x), (y-1), level, x, y);
         addVisitedNode((x-1), y, level, x, y);
         addVisitedNode((x), (y+1), level, x, y);
-        //
         addVisitedNode((x-1), (y-1), level, x, y);
         addVisitedNode((x-1), (y+1), level, x, y);
     } else if(x == 0 && y == gridHeight - 1) {
-        // 4
         addVisitedNode(x, (y-1), level, x, y);
         addVisitedNode((x+1), (y), level, x, y);
-        // 
         addVisitedNode((x+1), (y-1), level, x, y);
     } else if(x == 0 && y < gridHeight - 1) {
-        // 5
         addVisitedNode(x, (y-1), level, x, y);
         addVisitedNode((x+1), y, level, x, y);
         addVisitedNode(x, (y+1), level, x, y);
-        //
         addVisitedNode((x+1), (y-1), level, x, y);
         addVisitedNode((x+1), (y+1), level, x, y);
     } else if(x == gridWidth - 1 && y == gridHeight - 1) {
-        // 6
         addVisitedNode((x-1), (y), level, x, y);
         addVisitedNode(x, (y-1), level, x, y);
-        //
         addVisitedNode((x-1), (y-1), level, x, y);
     } else if(x < gridWidth - 1 && y == 0) {
-        // 7
         addVisitedNode((x-1), y, level, x, y);
         addVisitedNode((x), (y+1), level, x, y);
         addVisitedNode((x+1), y, level, x, y);
-        //
         addVisitedNode((x-1), (y+1), level, x, y);
         addVisitedNode((x+1), (y+1), level, x, y);
     } else if(x < gridWidth - 1 && y == gridHeight - 1) {
-        // 8
         addVisitedNode((x-1), (y), level, x, y);
         addVisitedNode(x, (y-1), level, x, y);
         addVisitedNode((x+1), (y), level, x, y);
-        // 
         addVisitedNode((x-1), (y-1), level, x, y);
         addVisitedNode((x+1), (y-1), level, x, y);
     } else {
-        // 9
         addVisitedNode((x-1), y, level, x, y);
         addVisitedNode(x, (y-1), level, x, y);
         addVisitedNode((x+1), y, level, x, y);
         addVisitedNode((x), (y+1), level, x, y);
-        //
         addVisitedNode((x-1), (y-1), level, x, y);
         addVisitedNode((x+1), (y+1), level, x, y);
         addVisitedNode((x+1), (y-1), level, x, y);
