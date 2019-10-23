@@ -1,0 +1,26 @@
+.cart-label, .total-price-label, .total-time-label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cart-text, .total-price-text, .total-time-text {
+    display: inline;
+    font-size: 20px
+}
+
+.grid-cell {
+    width: 75px;
+    height: 75px;
+    border: 1px solid 
+    #fff;
+    text-align: center;
+}
+
+.product-select {
+    width: 200px;
+    font-size: 18px;
+    height: 500px;
+    width: 100%;
+    float: left;
+    width: 30%;
+}
