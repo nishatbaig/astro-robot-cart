@@ -27,3 +27,6 @@ config.js
 Documentation and complexity added to the code as comments.
 
 ## Screenshot
+![alt text](images/main.png)
+![alt text](images/solution1.png)
+![alt text](images/solution2.png)
